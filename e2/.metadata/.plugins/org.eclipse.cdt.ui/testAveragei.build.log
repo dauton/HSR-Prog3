@@ -1,0 +1,15 @@
+09:56:42 **** Incremental Build of configuration Debug for project testAveragei ****
+make all 
+Building file: ../src/Test.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/hsr/prog3/e2/averagei" -I"/home/hsr/prog3/e2/testAveragei/cute" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test.d" -MT"src/Test.d" -o "src/Test.o" "../src/Test.cpp"
+Finished building: ../src/Test.cpp
+ 
+Building target: testAveragei
+Invoking: GCC C++ Linker
+g++ -L"/home/hsr/prog3/e2/averagei/Debug" -o "testAveragei"  ./src/Test.o   -laveragei
+Finished building target: testAveragei
+ 
+
+09:56:43 Build Finished (took 1s.454ms)
+

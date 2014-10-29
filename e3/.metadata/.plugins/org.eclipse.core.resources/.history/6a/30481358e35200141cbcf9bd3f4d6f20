@@ -1,0 +1,21 @@
+#include "pocketcalculator.h"
+
+#include <iostream>
+#include <stdexcept>
+
+void runPocketCalculator(std::istream &in, std::ostream &out) {
+	while (std::cin) {
+		try {
+			std::cout << calc(std::cin) << "\n";
+			//int result = calc(cin);
+			//istringstream in (to_string(calc(cin)));
+			//printLargeDigits(result, cout);
+		} catch (...) {
+			//printError(cout);
+			//cout << "ERROR";
+			std::cin.clear();
+			std::string line{};
+			std::getline(std::cin, line);
+		}
+	}
+}

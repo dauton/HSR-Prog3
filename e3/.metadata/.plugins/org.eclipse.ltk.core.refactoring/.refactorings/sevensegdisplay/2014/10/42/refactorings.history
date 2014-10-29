@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;sevensegdisplay/sevensegdisplay.cpp&apos; to &apos;sevensegment.cpp&apos;" description="Rename resource &apos;sevensegdisplay.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sevensegdisplay.cpp" name="sevensegment.cpp" stamp="1413206057593" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;sevensegdisplay/sevensegdisplay.h&apos; to &apos;sevensegment.h&apos;" description="Rename resource &apos;sevensegdisplay.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sevensegdisplay.h" name="sevensegment.h" stamp="1413206067649" updateReferences="true"/>
+</session>

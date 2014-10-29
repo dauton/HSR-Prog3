@@ -1,0 +1,18 @@
+#include <ostream>
+#include <map>
+#include <iomanip>
+#include "bcs.h"
+
+void print(std::ostream &output) {
+	std::map<std::string, float> drinks{
+		{"Beer", 4.65}, {"Moass", 9.15}, {"Schnapps", 3.85}, {"Soda", 2.95}
+	};
+	std::map<std::string, float>::iterator it;
+
+	for (std::map<std::string, float>::iterator it = drinks.begin(); it != drinks.end(); ++it) {
+		output << it->first;
+				for (int i = 1; i <= 10; i++) {
+					output << "\t" << it->second * i;
+				}
+	}
+}

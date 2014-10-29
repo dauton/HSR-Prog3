@@ -1,0 +1,6 @@
+19:49:52 **** Incremental Build of configuration Debug Gcov for project Hello World Library ****
+make all 
+make: Nothing to be done for `all'.
+
+19:49:52 Build Finished (took 61ms)
+

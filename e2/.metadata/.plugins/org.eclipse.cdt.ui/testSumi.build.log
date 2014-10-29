@@ -1,0 +1,15 @@
+19:50:58 **** Build of configuration Debug for project testSumi ****
+make all 
+Building file: ../src/Test.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/hsr/prog3/e2/sumi" -I"/home/hsr/prog3/e2/testSumi/cute" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test.d" -MT"src/Test.d" -o "src/Test.o" "../src/Test.cpp"
+Finished building: ../src/Test.cpp
+ 
+Building target: testSumi
+Invoking: GCC C++ Linker
+g++ -L"/home/hsr/prog3/e2/sumi/Debug" -o "testSumi"  ./src/Test.o   -lsumi
+Finished building target: testSumi
+ 
+
+19:50:59 Build Finished (took 1s.285ms)
+

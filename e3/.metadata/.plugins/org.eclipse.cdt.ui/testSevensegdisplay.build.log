@@ -1,0 +1,13 @@
+16:41:28 **** Incremental Build of configuration Debug for project testSevensegdisplay ****
+make all 
+Building file: ../src/Test.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/hsr/prog3/e3/sevensegdisplay" -I"/home/hsr/prog3/e3/testSevensegdisplay/cute" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test.d" -MT"src/Test.d" -o "src/Test.o" "../src/Test.cpp"
+../src/Test.cpp:5:29: fatal error: sevensegdisplay.h: No such file or directory
+ #include "sevensegdisplay.h"
+                             ^
+compilation terminated.
+make: *** [src/Test.o] Error 1
+
+16:41:28 Build Finished (took 380ms)
+

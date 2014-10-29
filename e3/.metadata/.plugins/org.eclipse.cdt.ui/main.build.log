@@ -1,0 +1,10 @@
+19:21:24 **** Build of configuration Debug for project main ****
+make all 
+Building target: main
+Invoking: GCC C++ Linker
+g++ -L"/home/hsr/prog3/e3/pocketcalculatorlib/Debug" -o "main"  ./main.o   -lpocketcalculatorlib
+Finished building target: main
+ 
+
+19:21:24 Build Finished (took 188ms)
+

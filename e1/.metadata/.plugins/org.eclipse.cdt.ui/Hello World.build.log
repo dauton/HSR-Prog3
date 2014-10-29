@@ -1,0 +1,10 @@
+19:49:52 **** Incremental Build of configuration Debug for project Hello World ****
+make all 
+Building target: Hello World
+Invoking: GCC C++ Linker
+g++  -o "Hello World"  ./src/Hello.o   
+Finished building target: Hello World
+ 
+
+19:49:52 Build Finished (took 70ms)
+

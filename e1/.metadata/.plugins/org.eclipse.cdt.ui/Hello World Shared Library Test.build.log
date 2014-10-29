@@ -1,0 +1,11 @@
+19:49:52 **** Incremental Build of configuration Debug for project Hello World Shared Library Test ****
+make all 
+Building target: Hello World Shared Library Test
+Invoking: GCC C++ Linker
+g++ -L"/home/hsr/c++-workspace/Hello World Shared Library/Debug" -o "Hello World Shared Library Test"  ./src/Test.o   -lHello\ World\ Shared\ Library
+/usr/bin/ld: cannot find -lHello World Shared Library
+collect2: error: ld returned 1 exit status
+make: *** [Hello World Shared Library Test] Error 1
+
+19:49:52 Build Finished (took 137ms)
+

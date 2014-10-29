@@ -1,0 +1,16 @@
+10:10:11 **** Incremental Build of configuration Debug for project multab ****
+make all 
+Building file: ../multab.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"multab.d" -MT"multab.d" -o "multab.o" "../multab.cpp"
+Finished building: ../multab.cpp
+ 
+Building target: libmultab.a
+Invoking: GCC Archiver
+ar -r  "libmultab.a"  ./multab.o   
+ar: creating libmultab.a
+Finished building target: libmultab.a
+ 
+
+10:10:12 Build Finished (took 279ms)
+

@@ -1,0 +1,8 @@
+#ifndef SEVENSEGDISPLAY
+#define SEVENSEGDISPLAY
+
+#include <iosfwd>
+
+void printLargeDigits(std::istream &in, std::ostream &out);
+
+#endif

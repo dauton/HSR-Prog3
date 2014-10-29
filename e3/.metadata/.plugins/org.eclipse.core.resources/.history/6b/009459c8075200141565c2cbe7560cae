@@ -1,0 +1,15 @@
+#include <ostream>
+#include <vector>
+
+#include "sevenseg.h"
+
+void printLargeDigit(unsigned int i, std::ostream &out) {
+	std::vector<std::string> one {{" - "}, {"| |"}, {"   "}, {"| |"}, {" - "}};
+	std::vector<std::string> two {{" - "}, {"  |"}, {" - "}, {"|  "}, {" - "}};
+	std::vector numbers;
+}
+
+void printOne() {
+
+}
+

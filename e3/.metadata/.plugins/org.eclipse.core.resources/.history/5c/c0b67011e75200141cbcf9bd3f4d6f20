@@ -1,0 +1,8 @@
+#include <iostream>
+#include "pocketcalculator.h"
+#include "calc.h"
+#include "sevensegment.h"
+
+int main() {
+	runPocketCalculator();
+}

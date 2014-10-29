@@ -1,0 +1,6 @@
+#include <iostream>
+#include "chchount.h"
+
+void count(std::istream &in, std::ostream &out) {
+
+}

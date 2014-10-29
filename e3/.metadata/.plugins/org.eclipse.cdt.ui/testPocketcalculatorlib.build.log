@@ -1,0 +1,17 @@
+19:29:40 **** Incremental Build of configuration Debug for project testPocketcalculatorlib ****
+make all 
+make: Warning: File `/home/hsr/prog3/e3/testPocketcalculatorlib/cute/cute.h' has modification time 1.6e+03 s in the future
+Building file: ../src/Test.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/hsr/prog3/e3/pocketcalculatorlib" -I"/home/hsr/prog3/e3/testPocketcalculatorlib/cute" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test.d" -MT"src/Test.d" -o "src/Test.o" "../src/Test.cpp"
+Finished building: ../src/Test.cpp
+ 
+Building target: testPocketcalculatorlib
+Invoking: GCC C++ Linker
+g++ -L"/home/hsr/prog3/e3/pocketcalculatorlib/Debug" -o "testPocketcalculatorlib"  ./src/Test.o   -lpocketcalculatorlib
+Finished building target: testPocketcalculatorlib
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+19:29:42 Build Finished (took 1s.658ms)
+

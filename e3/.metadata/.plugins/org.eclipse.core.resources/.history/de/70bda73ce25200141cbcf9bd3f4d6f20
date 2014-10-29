@@ -1,0 +1,7 @@
+#include "pocketcalculator.h"
+
+#include <istream>
+
+int main() {
+	runPocketCalculator(std::cin, std::cout);
+}

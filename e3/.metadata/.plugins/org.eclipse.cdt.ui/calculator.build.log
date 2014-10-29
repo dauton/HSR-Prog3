@@ -1,0 +1,12 @@
+16:50:43 **** Incremental Build of configuration Debug for project calculator ****
+make all 
+Building target: calculator
+Invoking: GCC C++ Linker
+g++ -L"/home/hsr/prog3/e3/sevensegdisplay/Debug" -L"/home/hsr/prog3/e3/calc/Debug" -L"/home/hsr/prog3/e3/pocketcalculator/Debug" -o "calculator"  ./main.o   -lsevensegdisplay -lcalc -lpocketcalculator
+/home/hsr/prog3/e3/pocketcalculator/Debug/libpocketcalculator.a(pocketcalculator.o): In function `runPocketCalculator()':
+/home/hsr/prog3/e3/pocketcalculator/Debug/../pocketcalculator.cpp:9: undefined reference to `calc(std::istream&)'
+collect2: error: ld returned 1 exit status
+make: *** [calculator] Error 1
+
+16:50:43 Build Finished (took 131ms)
+

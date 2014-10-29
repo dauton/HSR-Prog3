@@ -1,0 +1,10 @@
+#include <ostream>
+#include "multab.h"
+
+void print(std::ostream &output, unsigned int maxFactor) {
+	for (int i = 1; i <= maxFactor; i++) {
+		for (int j = 1; j <= maxFactor; j++) {
+			output << i * j;
+		}
+	}
+}

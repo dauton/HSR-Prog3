@@ -1,0 +1,10 @@
+10:10:12 **** Incremental Build of configuration Debug for project testMultab ****
+make all 
+Building target: testMultab
+Invoking: GCC C++ Linker
+g++ -L"/home/hsr/prog3/e2/multab/Debug" -o "testMultab"  ./src/Test.o   -lmultab
+Finished building target: testMultab
+ 
+
+10:10:12 Build Finished (took 126ms)
+

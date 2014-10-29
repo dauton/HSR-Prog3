@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="ch.hsr.ifs.cute.feature:4.7.0.201406152221"/>
+		<item value="ch.hsr.ifs.mockator.feature:0.0.1.201405060859"/>
+		<item value="ch.hsr.ifs.sconsolidator.depviz.feature:0.6.0.201406131901"/>
+		<item value="ch.hsr.ifs.sconsolidator.feature:0.6.0.201406131901"/>
+		<item value="org.eclipse.cdt.gdb:8.4.0.201406111759"/>
+		<item value="org.eclipse.cdt:8.4.0.201406111759"/>
+		<item value="org.eclipse.cvs:1.4.0.v20140221-1700"/>
+		<item value="org.eclipse.egit:3.2.0.201312181205-r"/>
+		<item value="org.eclipse.emf.common:2.9.2.v20131212-0545"/>
+		<item value="org.eclipse.emf.ecore:2.9.2.v20131212-0545"/>
+		<item value="org.eclipse.help:2.0.2.v20140221-1700"/>
+		<item value="org.eclipse.jgit:3.2.0.201312181205-r"/>
+		<item value="org.eclipse.platform:4.3.2.v20140221-1852"/>
+		<item value="org.eclipse.rcp:4.3.2.v20140221-1700"/>
+	</list>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="376" key="DIALOG_Y_ORIGIN"/>
+		<item value="502" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="486" key="DIALOG_WIDTH"/>
+		<item value="494" key="DIALOG_Y_ORIGIN"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="939" key="DIALOG_X_ORIGIN"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

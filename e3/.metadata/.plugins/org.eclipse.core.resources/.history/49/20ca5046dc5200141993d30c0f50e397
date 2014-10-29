@@ -1,0 +1,3 @@
+int main() {
+	runPocketCalculator(std::cin, std::cout);
+}

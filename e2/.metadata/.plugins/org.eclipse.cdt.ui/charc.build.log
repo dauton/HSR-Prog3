@@ -1,0 +1,16 @@
+19:50:52 **** Build of configuration Debug for project charc ****
+make all 
+Building file: ../charc.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"charc.d" -MT"charc.d" -o "charc.o" "../charc.cpp"
+Finished building: ../charc.cpp
+ 
+Building target: libcharc.a
+Invoking: GCC Archiver
+ar -r  "libcharc.a"  ./charc.o   
+ar: creating libcharc.a
+Finished building target: libcharc.a
+ 
+
+19:50:52 Build Finished (took 361ms)
+

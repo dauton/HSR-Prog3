@@ -1,0 +1,6 @@
+#include <istream>
+#include "wc.h"
+
+unsigned int countWords(std::istream &input) {
+
+}

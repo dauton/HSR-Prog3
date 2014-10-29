@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402991329765_1" label="Week 02" name="Week 02"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402991511728_3" label="Week 03" name="Week 03"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402992901511_5" label="Week 04" name="Week 04"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402993274489_7" label="Week 07" name="Week 07"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402994090762_9" label="Week 08" name="Week 08"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402995739824_11" label="Week 09" name="Week 09"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402996423501_13" label="Week 10" name="Week 10"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402996937728_15" label="Week 11" name="Week 11"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402996997560_17" label="Week 12" name="Week 12"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402997196126_19" label="Week 13" name="Week 13"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402997381981_21" label="Week 14" name="Week 14"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402918711300_0" label="Window Working Set" name="Aggregate for window 1402918711293"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402997588040_23" label="Multiple Working Sets" name="Aggregate:Week 02:Week 03:Week 04:Week 07:Week 08:Week 09:Week 10:Week 11:Week 12:Week 13:Week 14:">
+<workingSet IMemento.internal.id="Week 02"/>
+<workingSet IMemento.internal.id="Week 03"/>
+<workingSet IMemento.internal.id="Week 04"/>
+<workingSet IMemento.internal.id="Week 07"/>
+<workingSet IMemento.internal.id="Week 08"/>
+<workingSet IMemento.internal.id="Week 09"/>
+<workingSet IMemento.internal.id="Week 10"/>
+<workingSet IMemento.internal.id="Week 11"/>
+<workingSet IMemento.internal.id="Week 12"/>
+<workingSet IMemento.internal.id="Week 13"/>
+<workingSet IMemento.internal.id="Week 14"/>
+</workingSet>
+</workingSetManager>

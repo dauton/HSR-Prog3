@@ -1,0 +1,16 @@
+19:50:59 **** Build of configuration Debug for project wc ****
+make all 
+Building file: ../wc.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"wc.d" -MT"wc.d" -o "wc.o" "../wc.cpp"
+Finished building: ../wc.cpp
+ 
+Building target: libwc.a
+Invoking: GCC Archiver
+ar -r  "libwc.a"  ./wc.o   
+ar: creating libwc.a
+Finished building target: libwc.a
+ 
+
+19:50:59 Build Finished (took 272ms)
+

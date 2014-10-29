@@ -1,0 +1,13 @@
+#include <istream>
+#include "lc.h"
+
+unsigned int countLines(std::istream &input) {
+	unsigned int count{1};
+	char inputString{};
+
+	while(input.getline(s)) {
+		count++;
+	}
+
+	return count;
+}

@@ -1,0 +1,6 @@
+#include <iostream>
+#include "chcount.h"
+
+void count(std::istream &in, std::ostream &out) {
+	std::istream_iterator<char> it;
+}

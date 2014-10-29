@@ -1,0 +1,16 @@
+19:50:52 **** Build of configuration Debug for project lc ****
+make all 
+Building file: ../lc.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lc.d" -MT"lc.d" -o "lc.o" "../lc.cpp"
+Finished building: ../lc.cpp
+ 
+Building target: liblc.a
+Invoking: GCC Archiver
+ar -r  "liblc.a"  ./lc.o   
+ar: creating liblc.a
+Finished building target: liblc.a
+ 
+
+19:50:52 Build Finished (took 295ms)
+
