@@ -26,3 +26,10 @@
 *.exe
 *.out
 *.app
+
+# Custom
+.metadata
+Debug/
+test*.xml
+Test*.xml
+cute/
