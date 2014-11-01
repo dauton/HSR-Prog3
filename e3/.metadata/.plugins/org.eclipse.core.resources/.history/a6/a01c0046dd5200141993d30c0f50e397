@@ -1,9 +1,0 @@
-#include "pocketcalculator.h"
-#include "calc.h"
-#include "sevensegment.h"
-
-#include <sstream>
-
-int main() {
-	runPocketCalculator(std::cin, std::cout);
-}

@@ -1,6 +1,0 @@
-#include <ostream>
-#include "multab.h"
-
-void print(std::ostream &output, int maxFactor) {
-
-}

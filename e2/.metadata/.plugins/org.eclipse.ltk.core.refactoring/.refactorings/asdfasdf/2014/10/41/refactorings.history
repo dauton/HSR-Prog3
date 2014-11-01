@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;sumf/sumi.h&apos; to &apos;sumf.h&apos;" description="Rename resource &apos;sumi.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sumi.h" name="sumf.h" stamp="1412963073938" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;sumf/sumi.cpp&apos; to &apos;sumf.cpp&apos;" description="Rename resource &apos;sumi.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sumi.cpp" name="sumf.cpp" stamp="1412963083996" updateReferences="true"/>
-</session>

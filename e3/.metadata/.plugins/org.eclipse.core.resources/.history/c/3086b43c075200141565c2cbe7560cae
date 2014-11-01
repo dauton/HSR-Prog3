@@ -1,7 +1,0 @@
-#include <ostream>
-#include "sevenseg.h"
-
-void printLargeDigit(unsigned int i, std::ostream &out) {
-
-}
-

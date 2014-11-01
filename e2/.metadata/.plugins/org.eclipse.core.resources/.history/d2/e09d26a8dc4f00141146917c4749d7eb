@@ -1,6 +1,0 @@
-#include <iostream>
-#include "allcharc.h"
-
-unsigned int countAllCharacters(std::istream &input) {
-
-}

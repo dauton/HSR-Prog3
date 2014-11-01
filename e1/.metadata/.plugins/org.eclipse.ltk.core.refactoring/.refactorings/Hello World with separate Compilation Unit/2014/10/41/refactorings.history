@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Hello World with separate Compilation Unit/src/Hello World with separate Compilation Unit.cpp&apos; to &apos;mainsayhello.cpp&apos;" description="Rename resource &apos;Hello World with separate Compilation Unit.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Hello World with separate Compilation Unit.cpp" name="mainsayhello.cpp" stamp="1412705375567" updateReferences="true"/>
-</session>

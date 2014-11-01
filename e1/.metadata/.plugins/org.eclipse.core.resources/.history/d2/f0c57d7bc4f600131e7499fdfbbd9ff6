@@ -1,8 +1,0 @@
-#include "binary.h"
-#include <iostream>
-
-int main(){
-	using namespace binary;
-	auto x = 100_bin;
-	std::cout << "binary 100:"<< x << '\n';
-}
