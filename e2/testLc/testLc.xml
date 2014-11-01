@@ -1,6 +1,0 @@
-<testsuites>
-	<testsuite name="AllTests" tests="2">
-		<testcase classname="AllTests" name="shouldNotCountEmptySpace"/>
-		<testcase classname="AllTests" name="shouldCountTwoLines"/>
-	</testsuite>
-</testsuites>
