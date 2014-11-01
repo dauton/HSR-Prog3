@@ -28,7 +28,9 @@
 *.app
 
 # Custom
+.cproject
 .metadata
+.project
 Debug/
 test*.xml
 Test*.xml

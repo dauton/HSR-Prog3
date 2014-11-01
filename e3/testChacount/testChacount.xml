@@ -1,9 +1,0 @@
-<testsuites>
-	<testsuite name="AllTests" tests="1">
-		<testcase classname="AllTests" name="thisIsATest">
-			<failure message="../src/Test.cpp:12 thisIsATest: &quot;6&quot; == out.str() expected:	6	but was:	4	">
-thisIsATest: &quot;6&quot; == out.str() expected:	6	but was:	4	
-			</failure>
-		</testcase>
-	</testsuite>
-</testsuites>
