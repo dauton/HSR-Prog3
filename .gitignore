@@ -30,6 +30,7 @@
 # Custom
 .cproject
 .metadata
+.settings/
 .project
 Debug/
 test*.xml
