@@ -18,31 +18,39 @@ std::ostream& Word::print(std::ostream& out) const {
     out << w;
     return out;
 }
+
 std::istream& Word::read(std::istream& in) {
-    std::string newword{};
+    std::string newWord{};
+
     char c{};
-    while (in.get(c));
-    while (isalpha(c)){
-        newword += c;
-        if (!in.get(c)) break;
+
+    while (in.good()) {
+    	c = in.get();
+
+    	if (isalpha(c)) {
+			newWord += c;
+		} else {
+			if (newWord.size() > 0) {
+				w=newWord;
+				break;
+			}
+		}
     }
-    if (invalidWord(newword))
-         in.clear(std::ios::failbit);
-    else {
-        w=newword;
-        if (in.eof()) in.clear(); // might have read into stream eof, but still got a word
-    }
+    if (newWord.empty()) in.setstate(std::ios::failbit);
     return in;
 }
-bool Word::stringcaselessequal(std::string const &w, std::string const &other){
-    size_t len=std::min(w.size(),other.size());
-    return std::equal(w.begin(),w.begin()+len,other.begin(),
-                        [](char l, char r){
-                            return tolower(l) == tolower(r);
-                        });
 
+bool Word::stringEqualIgnoreCase(std::string const &w, std::string const &other){
+    if (w.size() != other.size()) {
+		return false;
+	} else {
+		return std::equal(w.begin(),w.end(),other.begin(),
+                        	[](char l, char r){
+                            	return tolower(l) == tolower(r);
+                        	});
+	}
 }
-bool Word::stringcaselessless(std::string const &w, std::string const &other){
+bool Word::stringLessIgnoreCase(std::string const &w, std::string const &other){
     return std::lexicographical_compare(w.begin(),w.end(),
                                         other.begin(),other.end(),
                                         [](char l, char r){
