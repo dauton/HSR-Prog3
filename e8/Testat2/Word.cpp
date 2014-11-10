@@ -28,7 +28,7 @@ std::istream& Word::read(std::istream& in) {
     	c = in.get();
 
     	if (isalpha(c)) {
-			newWord += c;
+			newWord += tolower(c);
 		} else {
 			if (newWord.size() > 0) {
 				w=newWord;

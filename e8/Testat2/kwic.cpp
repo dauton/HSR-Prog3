@@ -24,11 +24,9 @@ void generateKwic(std::istream &in, std::ostream &out) {
 
 			iss >> w;
 
-			/*if (Word::) {
+			if (!(w == "init")) {
 				words.push_back(w);
-			}*/
-
-			words.push_back(w);
+			}
 		}
 
 		for (std::vector<Word>::iterator itLine = words.begin(); itLine != words.end(); itLine++) {
