@@ -5,20 +5,21 @@
 #include <algorithm>
 #include <string.h>
 
-void generateKwic() {
+void generateKwic(std::istream &in, std::ostream &out) {
 	std::vector<std::string> lines{};
 
-	while(!std::cin.eof() && std::cin.good()) {
+	while (!in.eof() && in.good()) {
 		std::string line{};
 
-		std::getline(std::cin, line);
+		std::getline(in, line);
 
 		std::stringstream iss{};
-		std::vector<Word> words{};
 
 		iss << line;
 
-		while(!iss.eof() && iss.good()) {
+		std::vector<Word> words{};
+
+		while (!iss.eof() && iss.good()) {
 			Word w{"init"};
 
 			iss >> w;
@@ -30,11 +31,11 @@ void generateKwic() {
 			words.push_back(w);
 		}
 
-		for (unsigned int i = 0; i < words.size(); i++) {
+		for (std::vector<Word>::iterator itLine = words.begin(); itLine != words.end(); itLine++) {
 			std::stringstream oss{};
 
-			for (unsigned int j = 0; j < words.size(); j++) {
-				oss << words[j] << " ";
+			for (std::vector<Word>::iterator itRotation = words.begin(); itRotation != words.end(); itRotation++) {
+				oss << *itRotation << " ";
 			}
 
 			lines.push_back(oss.str());
@@ -42,12 +43,10 @@ void generateKwic() {
 		}
 
 		std::sort(lines.begin(), lines.end());
+	}
 
-		for (unsigned int i = 0; i < lines.size(); i++) {
-			std::cout << lines[i] << "\n";
-		}
-
-		std::cout << "\n";
+	for (std::vector<std::string>::iterator it = lines.begin(); it != lines.end(); it++) {
+		out << *it << "\n";
 	}
 }
 

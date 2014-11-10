@@ -1,8 +1,10 @@
+#include "Word.h"
+#include "kwic.h"
+
 #include "cute.h"
 #include "ide_listener.h"
 #include "xml_listener.h"
 #include "cute_runner.h"
-#include "Word.h"
 
 void createWord() {
     Word w {"Hammer"};
@@ -80,6 +82,31 @@ void wordStreamInputInvalid(){
 	ASSERT_EQUAL(w, "init"); // w not overridden
 }
 
+void oneLine() {
+	std::istringstream in {"hi ho"};
+	std::ostringstream out {};
+
+	generateKwic(in, out);
+	ASSERT_EQUAL(out.str(), "hi ho \n"
+							"ho hi \n");
+}
+
+void twoLine() {
+	std::istringstream in {	"this is a test\n"
+							"this is another test"};
+	std::ostringstream out {};
+
+	generateKwic(in, out);
+	ASSERT_EQUAL(out.str(), "a test this is \n"
+							"another test this is \n"
+							"is a test this \n"
+							"is another test this \n"
+							"test this is a \n"
+							"test this is another \n"
+							"this is a test \n"
+							"this is another test \n");
+}
+
 void runAllTests(int argc, char const *argv[]){
 	cute::suite s;
 	s.push_back(CUTE(createWord));
@@ -92,6 +119,8 @@ void runAllTests(int argc, char const *argv[]){
 	s.push_back(CUTE(wordOutput));
 	s.push_back(CUTE(wordStreamInput));
 	s.push_back(CUTE(wordStreamInputInvalid));
+	s.push_back(CUTE(oneLine));
+	s.push_back(CUTE(twoLine));
 
 	cute::xml_file_opener xmlfile(argc,argv);
 	cute::xml_listener<cute::ide_listener<> >  lis(xmlfile.out);

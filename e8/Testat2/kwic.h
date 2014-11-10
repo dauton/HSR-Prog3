@@ -3,6 +3,6 @@
 
 #include <iosfwd>
 
-void generateKwic();
+void generateKwic(std::istream &in, std::ostream &out);
 
 #endif
