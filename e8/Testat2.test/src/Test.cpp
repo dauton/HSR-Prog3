@@ -134,7 +134,7 @@ void ignoreEmptyLines() {
 
 void ignoreInvalidInput() {
 	std::istringstream in {	"this is a test\n"
-							"hiäho\n"
+							"hiä ho\n"
 							"this is another test"};
 	std::ostringstream out {};
 
