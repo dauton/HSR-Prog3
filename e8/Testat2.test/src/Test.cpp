@@ -30,7 +30,8 @@ void nonAlphaWord()
     ASSERT_EQUAL("", oss.str());
 }
 
-void wordEqual() {
+void wordEqual()
+{
 	std::istringstream iss {"SUMMER suMmer"};
 	std::ostringstream oss {};
 	Word w {};
@@ -39,68 +40,92 @@ void wordEqual() {
 	iss >> w;
 	iss >> w2;
 
+	w.print(oss);
+
 	ASSERT(w == w2);
 	ASSERT_EQUAL(w, w2);
+	ASSERT_EQUAL("SUMMER", oss.str());
 }
-/*
+
 void wordNotEqual() {
-	 Word w1 {"kamm"};
-	 Word w2 {"kammer"};
-	 ASSERT(!(w1 == w2));
-	 ASSERT(!(w1 == "komm"));
+	std::istringstream iss {"kamm kammer"};
+	std::ostringstream oss {};
+	Word w {};
+	Word w2 {};
+
+	iss >> w;
+	iss >> w2;
+
+	w.print(oss);
+
+	ASSERT(!(w == w2));
+	ASSERT(!(oss.str() == "komm"));
 }
 
-void wordLessThan(){
-    Word w1{"Hammer"};
-    Word w2{"Hammerschlag"};
-    ASSERT(w1 < w2);
-    ASSERT(w2 < "Schlaghammer");
+void wordLessThan()
+{
+	std::istringstream iss {"Hammer Hammerschlag"};
+	std::ostringstream oss {};
+	Word w {};
+	Word w2 {};
+
+	iss >> w;
+	iss >> w2;
+
+	ASSERT(w < w2);
 }
 
-void wordNotLessThan(){
-    Word w1{"Zug"};
-    Word w2{"Zack"};
-    ASSERT(!(w1 < w2));
-    ASSERT(!(w1 < w1));
-    ASSERT_EQUAL(w1, w1);
+void wordNotLessThan()
+{
+	std::istringstream iss {"Zug Zack"};
+	std::ostringstream oss {};
+	Word w {};
+	Word w2 {};
+
+	iss >> w;
+	iss >> w2;
+
+	ASSERT(!(w < w2));
 }
 
-void wordOutput(){
-    std::ostringstream out;
-    Word w{"Servus"};
-    out << w;
-    ASSERT_EQUAL("Servus",out.str());
+void wordOutput()
+{
+	std::istringstream iss {"Servus"};
+	std::ostringstream oss {};
+	Word w {};
+
+	iss >> w;
+	w.print(oss);
+
+    ASSERT_EQUAL("Servus", oss.str());
 }
 
-void wordStreamInput(){
-	std::istringstream in {"Servus alle/2?miteinander! Gruss"};
-	Word w{"init"}; // Word can not be blank!
+void wordStreamInput()
+{
+	std::istringstream iss {"Servus alle/2?miteinander! Gruss"};
+	std::ostringstream oss {};
+	Word w {};
 
-	in >> w;
-	ASSERT_EQUAL(w, "servus");
-	in >> w;
-	ASSERT_EQUAL(w, "alle");
-	in >> w;
-	ASSERT_EQUAL(w, "miteinander");
-	in >> w;
-	ASSERT_EQUAL(w, "gruss");
+	iss >> w;
+	w.print(oss);
+
+	ASSERT_EQUAL("Servus", oss.str());
 }
 
-void wordStreamInputInvalid(){
-	std::istringstream inEmpty{""};
-	std::istringstream inNonAlpha {"78/[]"};
-	Word w{"init"}; // Word can not be blank!
+void wordStreamInputInvalid()
+{
+	std::istringstream iss {"78/[]"};
+	std::ostringstream oss {};
+	Word w{};
 
-	inEmpty >> w;
-	ASSERT(inEmpty.fail());
+	iss >> w;
+	w.print(oss);
 
-	inNonAlpha >> w;
-	ASSERT(inNonAlpha.fail());
+	ASSERT_EQUAL("", oss.str());
+}
 
-	ASSERT_EQUAL(w, "init"); // w not overridden
-}*/
-
-void emptyInput() {
+void emptyInput()
+{
 	std::istringstream in {""};
 	std::ostringstream out {};
 
@@ -108,7 +133,8 @@ void emptyInput() {
 	ASSERT_EQUAL(out.str(), "");
 }
 
-void oneLine() {
+void oneLine()
+{
 	std::istringstream in {"hi ho"};
 	std::ostringstream out {};
 
@@ -117,7 +143,8 @@ void oneLine() {
 							"ho hi \n");
 }
 
-void twoLine() {
+void twoLine()
+{
 	std::istringstream in {	"this is a test\n"
 							"this is another test"};
 	std::ostringstream out {};
@@ -133,7 +160,8 @@ void twoLine() {
 							"this is another test \n");
 }
 
-void ignoreEmptyLines() {
+void ignoreEmptyLines()
+{
 	std::istringstream in {	"this is a test\n"
 							"\n"
 							"this is another test"};
@@ -150,7 +178,8 @@ void ignoreEmptyLines() {
 							"this is another test \n");
 }
 
-void ignoreInvalidInput() {
+void ignoreInvalidInput()
+{
 	std::istringstream in {	"this is a test\n"
 							"hiäho\n"
 							"this is another test"};
@@ -169,7 +198,8 @@ void ignoreInvalidInput() {
 							"this is another test \n");
 }
 
-void differentLineLenghts() {
+void differentLineLenghts()
+{
 	std::istringstream in {	"this is a test\n"
 							"this is a second test"};
 	std::ostringstream out {};
@@ -186,32 +216,32 @@ void differentLineLenghts() {
 							"this is a test \n");
 }
 
-void runAllTests(int argc, char const *argv[]){
+void runAllTests(int argc, char const *argv[])
+{
 	cute::suite s;
 	s.push_back(CUTE(createWord));
 	s.push_back(CUTE(nonAlphaWord));
 	s.push_back(CUTE(wordEqual));
-	/*s.push_back(CUTE(wordLessThan));
 	s.push_back(CUTE(wordNotEqual));
+	s.push_back(CUTE(wordLessThan));
 	s.push_back(CUTE(wordNotLessThan));
 	s.push_back(CUTE(wordOutput));
 	s.push_back(CUTE(wordStreamInput));
-	s.push_back(CUTE(wordStreamInputInvalid));*/
+	s.push_back(CUTE(wordStreamInputInvalid));
 	s.push_back(CUTE(oneLine));
 	s.push_back(CUTE(twoLine));
 	s.push_back(CUTE(emptyInput));
 	s.push_back(CUTE(differentLineLenghts));
 	s.push_back(CUTE(ignoreEmptyLines));
 	s.push_back(CUTE(ignoreInvalidInput));
-
-	cute::xml_file_opener xmlfile(argc,argv);
-	cute::xml_listener<cute::ide_listener<> >  lis(xmlfile.out);
-	cute::makeRunner(lis,argc,argv)(s, "AllTests");
+	cute::xml_file_opener xmlfile(argc, argv);
+	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
+	cute::makeRunner(lis, argc, argv)(s, "AllTests");
 }
 
-int main(int argc, char const *argv[]){
-    runAllTests(argc,argv);
-    return 0;
+int main(int argc, char const *argv[])
+{
+    runAllTests(argc, argv);
 }
 
 
