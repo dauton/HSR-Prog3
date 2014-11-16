@@ -1,60 +1,54 @@
 #include "Word.h"
 #include <algorithm>
+#include <iterator>
 #include <stdexcept>
-#include <istream>
-#include <ostream>
+#include <iostream>
 #include <cctype>
 
-bool invalidWord(std::string const &w) {
-	return (w.empty()
-	       || count_if(w.begin(),w.end(),[](char c){return !isalpha(c);}));
-}
-Word::Word(std::string const &word):w{word}{
-	if (invalidWord(w)) {
-		throw std::logic_error{"not a valid word"};
+Word::Word(std::string const &inputString)
+{
+	if (inputString.empty()) {
+		throw std::invalid_argument("empty string supplied");
 	}
+
+    copy_if(inputString.cbegin(), inputString.cend(), std::back_inserter(rep), [](char const character) {
+    	if (!std::isalpha(character)) {
+    		throw std::invalid_argument("invalid character in input");
+        }
+
+    	return true;
+    });
 }
-std::ostream& Word::print(std::ostream& out) const {
-    out << w;
-    return out;
+
+std::string Word::lowerCaseRep() const
+{
+	std::string lcr {};
+
+	transform(rep.cbegin(), rep.cend(), std::back_inserter(lcr), (int(*)(int))std::tolower);
+
+	return lcr;
 }
 
-std::istream& Word::read(std::istream& in) {
-    std::string newWord{};
+std::istream& Word::read(std::istream &inputStream) {
+    std::string readBuffer {};
 
-    char c{};
-
-    while (in.good()) {
-    	c = in.get();
-
-    	if (isalpha(c)) {
-			newWord += tolower(c);
-		} else {
-			if (newWord.size() > 0) {
-				w=newWord;
-				break;
-			}
-		}
+    while (!std::isalpha(inputStream.peek()) && inputStream) {
+    	inputStream.ignore(1);
     }
-    if (newWord.empty()) in.setstate(std::ios::failbit);
-    return in;
-}
 
-bool Word::stringEqualIgnoreCase(std::string const &w, std::string const &other){
-    if (w.size() != other.size()) {
-		return false;
-	} else {
-		return std::equal(w.begin(),w.end(),other.begin(),
-                        	[](char l, char r){
-                            	return tolower(l) == tolower(r);
-                        	});
-	}
-}
-bool Word::stringLessIgnoreCase(std::string const &w, std::string const &other){
-    return std::lexicographical_compare(w.begin(),w.end(),
-                                        other.begin(),other.end(),
-                                        [](char l, char r){
-                                            return tolower(l) < tolower(r);
-                                        });
-}
+    if (!inputStream) {
+    	return inputStream;
+    }
 
+    while (std::isalpha(inputStream.peek())) {
+    	readBuffer += inputStream.get();
+    }
+
+    rep = readBuffer;
+
+    if (!inputStream) {
+    	inputStream.clear(std::ios_base::eofbit);
+    }
+
+    return inputStream;
+}
