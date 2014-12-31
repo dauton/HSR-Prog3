@@ -79,7 +79,7 @@ void testUnknownOperator() {
 }
 
 void testIStreamWay() {
-	std::stringstream testStream("32%");
+	std::stringstream testStream("3%2");
 	ASSERT_EQUAL(1, calc(testStream));
 }
 

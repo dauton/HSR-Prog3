@@ -1,39 +1,43 @@
 #include "calc.h"
+
 #include <istream>
 #include <stdexcept>
 
-int calc(int firstNumber, int secondNumber, char operatorSymbol){
+int calc(int firstOperand, int secondOperand, char operatorSymbol)
+{
+	switch(operatorSymbol) {
+		case '+':
+			return firstOperand + secondOperand;
+		case '-':
+			return firstOperand - secondOperand;
+		case '*':
+			return firstOperand * secondOperand;
+		case '/':
+			if (secondOperand == 0) {
+				throw std::invalid_argument("Division by zero!");
+			}
 
-	//Could also be a switch-case
-	if(operatorSymbol == '+'){
-		return firstNumber + secondNumber;
-	}else if(operatorSymbol == '-'){
-		return firstNumber - secondNumber;
-	}else if(operatorSymbol == '*'){
-		return firstNumber*secondNumber;
-	}else if(operatorSymbol == '%'){
-		return firstNumber % secondNumber;
-	}else if(operatorSymbol == '/'){
-		// special case
-		if(secondNumber == 0){
-			throw std::invalid_argument("Cannot divide by zero"); //like this.
-		}
-		return firstNumber / secondNumber;
-	}else{
-		throw std::invalid_argument("Unknown operator!");
+			return firstOperand / secondOperand;
+		case '%':
+			if (secondOperand == 0) {
+				throw std::invalid_argument("Modulo by zero!");
+			}
+
+			return firstOperand % secondOperand;
+		default:
+			throw std::invalid_argument("Unknown operation");
 	}
 }
 
+int calc(std::istream &input) {
+	int firstOperand {};
+	int secondOperand {};
+	char operatorSymbol {};
 
-int calc(std::istream &input){
-	int firstNumber{0};
-	int secondNumber{0};
-	char operatorSymbol { };
-
-	input >> firstNumber;
-	input >> secondNumber;
+	input >> firstOperand;
 	input >> operatorSymbol;
+	input >> secondOperand;
 
-	return calc(firstNumber, secondNumber, operatorSymbol);
-
+	return calc(firstOperand, secondOperand, operatorSymbol);
 }
+
